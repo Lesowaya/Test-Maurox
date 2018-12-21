@@ -3,7 +3,7 @@
 * [Download the installer](https://nodejs.org/) for Node.js 8 or greater.
 * Install the ionic CLI globally: `npm install -g ionic`
 * Clone this repository: `git clone https://github.com/Lesowaya/Test-Maurox.git`.
-* Run `npm install` from the project root.
+* Run `npm install` from the `/app` folder.
 * Run `ionic serve` in a terminal from the project root.
 
 ## Building
@@ -26,7 +26,6 @@ ionic cordova build android
 
 *Install MongoDB and create database
 *Run MongoDB
-* Clone this repository: `git clone https://github.com/Lesowaya/Test-Maurox.git`.
-* Run `npm install` from the project root.
+* Run `npm install` from the `/server` folder.
 * Create certificates for https.
 * Run `node app.js` in a terminal from the project root.
