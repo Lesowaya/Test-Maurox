@@ -19,7 +19,6 @@ import { MainHttpInterceptor } from './main-http-interceptor';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,12 +28,15 @@ import { MainHttpInterceptor } from './main-http-interceptor';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {
+      provide: ErrorHandler,
+      useClass: IonicErrorHandler
+    },
     UserServiceProvider,
     {
-        provide: HTTP_INTERCEPTORS,
-        useClass: MainHttpInterceptor,
-        multi: true
+      provide: HTTP_INTERCEPTORS,
+      useClass: MainHttpInterceptor,
+      multi: true
     }
   ]
 })

@@ -1,5 +1,4 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>
       Ionic Blank
@@ -8,21 +7,20 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-input type="text" [(ngModel)]="name" name="name" ></ion-input>
+  <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
   <ion-col col-6>
-    <button ion-button full (click)="addToDb()" >Add to database</button>
- </ion-col>
- <ion-col col-6>
-  <button ion-button full (click)="deleteAllMessages()" >Delete All Messages</button>
-</ion-col>
-<ion-row>
-<ion-col>
-<ion-list>
-  <button ion-item *ngFor="let item of items" (click)="delRowWithId(item._id)">
-  {{ item.name }}
-  </button>
-</ion-list>
-</ion-col>
-</ion-row>
-
+    <button ion-button full (click)="addMessage()">Add to database</button>
+  </ion-col>
+  <ion-col col-6>
+    <button ion-button full (click)="deleteAllMessages()">Delete All Messages</button>
+  </ion-col>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="deleteMessage(item._id)">
+          {{ item.name }}
+        </button>
+      </ion-list>
+    </ion-col>
+  </ion-row>
 </ion-content>
